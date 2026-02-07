@@ -17,11 +17,13 @@ Content-Type: application/json
 }
 
 ### update
-PUT http://localhost:3000/books/1
+PUT http://localhost:3000/books/3
 Content-Type: application/json
 
 {
-  "title": "Updated Book",
-  "author": "Updated Author",
+  "id": 4,
   "rating": 4
 }
+
+### delete
+DELETE http://localhost:3000/books/3

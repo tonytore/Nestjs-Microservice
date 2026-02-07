@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateBookDto } from './dto/create-book.dto';
 import { UpdateBookDto } from './dto/update-book.dto';
-import { BookDto } from './dto/book.dto';
+import { BookDto } from '@app/contracts/books/book.dto';
 
 @Injectable()
 export class BooksService {
@@ -37,7 +37,7 @@ export class BooksService {
   }
 
   update(id: number, updateBookDto: UpdateBookDto) {
-    const books = this.findOne(id);
+    const books = this.books.find((book) => book.id === id);
     if (books) {
       Object.assign(books, updateBookDto);
       return books;
