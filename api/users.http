@@ -1,0 +1,27 @@
+GET http://localhost:3000/users
+
+### findAll
+GET http://localhost:3000/books
+
+### findOne
+GET http://localhost:3000/books/1
+
+### create
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "title": "New Book",
+  "author": "Author Name",
+  "rating": 5
+}
+
+### update
+PUT http://localhost:3000/books/1
+Content-Type: application/json
+
+{
+  "title": "Updated Book",
+  "author": "Updated Author",
+  "rating": 4
+}
