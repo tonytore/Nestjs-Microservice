@@ -8,4 +8,8 @@ export class UsersService {
   findAll() {
     return this.usersClient.send('users.findAll', {});
   }
+
+  findByUserName(username: string) {
+    return this.usersClient.send('users.findByUserName', username);
+  }
 }

@@ -10,4 +10,9 @@ export class UsersController {
   findAll() {
     return this.usersService.findAll();
   }
+
+  @MessagePattern('users.findByUserName')
+  findByUserName(username: string) {
+    return this.usersService.findByUserName(username);
+  }
 }
