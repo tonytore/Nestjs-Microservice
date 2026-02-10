@@ -15,4 +15,7 @@ async function bootstrap() {
   );
   await app.listen();
 }
-bootstrap();
+bootstrap().catch((err) => {
+  console.error('Failed to start Books microservice', err);
+  process.exit(1);
+});

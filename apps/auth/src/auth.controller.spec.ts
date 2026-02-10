@@ -16,7 +16,12 @@ describe('AuthController', () => {
 
   describe('root', () => {
     it('should return "Hello World!"', () => {
-      expect(authController.getHello()).toBe('Hello World!');
+      expect(authController.login({ username: 'test', password: 'test' })).toBe(
+        {
+          username: 'test',
+          password: 'test',
+        },
+      );
     });
   });
 });
